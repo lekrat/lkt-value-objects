@@ -4,11 +4,8 @@ namespace Lkt\ValueObjects\Types;
 
 final class OptionalBooleanValue
 {
-    private $value = false;
+    private bool $value = false;
 
-    /**
-     * @param $value
-     */
     public function __construct($value)
     {
         if (!$value) {
@@ -17,9 +14,6 @@ final class OptionalBooleanValue
         $this->value = $value === true;
     }
 
-    /**
-     * @return bool
-     */
     public function getValue(): bool
     {
         return $this->value;

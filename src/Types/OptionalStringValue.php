@@ -4,11 +4,8 @@ namespace Lkt\ValueObjects\Types;
 
 final class OptionalStringValue
 {
-    private $value;
+    private string $value;
 
-    /**
-     * @param $value
-     */
     public function __construct($value = '')
     {
         if (!$value) {
@@ -17,9 +14,6 @@ final class OptionalStringValue
         $this->value = $value;
     }
 
-    /**
-     * @return string
-     */
     public function getValue(): string
     {
         return $this->value;
